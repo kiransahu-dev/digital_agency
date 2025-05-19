@@ -7,6 +7,8 @@ import {
   FaUserFriends,
   FaCameraRetro,
 } from "react-icons/fa";
+import { slideIn } from "../utils/motion";
+import { motion } from "framer-motion";
 
 const Services = () => {
   return (
@@ -15,7 +17,13 @@ const Services = () => {
         <div className="flex items-center justify-center">
           <h1 className="font-bold text-[#a61040] text-4xl">Services</h1>
         </div>
-        <div className="grid md:grid-cols-3 grid-cols-1 gap-6 items-center justify-center pt-6 md:pt-14 ">
+        <motion.div
+          variants={slideIn("up", "tween", 0.3, 0.8)}
+          initial="hidden"
+          animate="show"
+          exit="hidden"
+          className="grid md:grid-cols-3 grid-cols-1 gap-6 items-center justify-center pt-6 md:pt-14 "
+        >
           <div className="relative w-full h-full overflow-hidden rounded-lg bg-black/90 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 left-[-100%] w-[100%] h-full bg-gradient-to-r from-transparent via-red-600/75 to-transparent transform rotate-[25deg] blur-sm opacity-0 transition-all duration-1000 group-hover:left-[100%] group-hover:opacity-100"></div>
@@ -107,7 +115,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-        </div>
+        </motion.div>
       </section>
     </>
   );
