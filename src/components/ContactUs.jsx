@@ -33,13 +33,13 @@ const ContactUs = () => {
   };
 
   return (
-    <div className="bg-red-600/30">
+    <section className="bg-red-600/30">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-12 gap-8 lg:gap-12 ">
           {/* brand column */}
           <div className="lg:col-span-4">
             <div className="cursor-pointer flex items-center">
-              <img src={logo} alt="logo/png" className="w-20 h-20 " />
+              <img src={logo} alt="logo/png" className="w-20 h-20 " id="home" />
               <p className="text-xl font-medium ml-1">Aries Digitals</p>
             </div>
             <p className="text-gray-600 mb-6 pl-3">
@@ -99,7 +99,7 @@ const ContactUs = () => {
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

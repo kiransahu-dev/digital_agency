@@ -4,7 +4,7 @@ import { BsGraphUpArrow } from "react-icons/bs";
 
 const Hero = () => {
   return (
-    <section className="container mx-auto md:pt-44 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between">
+    <section className="container mx-auto md:pt-44 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between" id="home">
       {/* left column */}
       <div className="w-fit md:w-1/2 space-y-8 gap-4">
         <h1 className="md:text-5xl text-2xl font-bold leading-tight">

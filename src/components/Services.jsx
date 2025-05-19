@@ -11,7 +11,7 @@ import {
 const Services = () => {
   return (
     <>
-      <div className="container mx-auto md:pt-24 pt-10 px-4">
+      <section className="container mx-auto md:pt-24 pt-10 px-4" id="services">
         <div className="flex items-center justify-center">
           <h1 className="font-bold text-[#a61040] text-4xl">Services</h1>
         </div>
@@ -108,7 +108,7 @@ const Services = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

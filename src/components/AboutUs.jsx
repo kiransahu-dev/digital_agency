@@ -4,7 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 const AboutUs = () => {
   return (
     <>
-      <div className="container mx-auto md:pt-24 pt-10 px-4">
+      <section className="container mx-auto md:pt-24 pt-10 px-4" id="aboutus">
         {/* about */}
         <div className="flex items-center justify-center">
           <h1 className="font-bold text-[#a61040] text-4xl">About Us</h1>
@@ -83,7 +83,7 @@ const AboutUs = () => {
             </div>
           </div>
         </div>
-      </div>
+      </section>
     </>
   );
 };

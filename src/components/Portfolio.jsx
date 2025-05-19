@@ -17,7 +17,7 @@ const Portfolio = () => {
   }, []);
 
   return (
-    <section className="container mx-auto md:pt-44 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between">
+    <section className="container mx-auto md:pt-44 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between" id="portfolio">
       <div className="max-w-6xl mx-auto text-center">
         <motion.h2
           className="text-3xl font-bold dark:text-red-600 mb-12"
