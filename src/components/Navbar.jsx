@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import logo from "../assets/logo-nav.png";
 import { HiX } from "react-icons/hi";
 import { IoMdMenu } from "react-icons/io";
+import { motion } from "motion/react";
+import { fadeIn } from "../utils/motion";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -15,7 +17,13 @@ const Navbar = () => {
     { href: "#contactus", label: "Contact Us" },
   ];
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 shadow-md bg-white/90 border-b backdrop-blur-sm border-gray-100">
+    <motion.nav
+      variants={fadeIn("down", 0.2)}
+      initial="hidden"
+      whileInView="show"
+      viewport={{ once: true }}
+      className="fixed top-0 left-0 right-0 z-50 shadow-md bg-white/90 border-b backdrop-blur-sm border-gray-100"
+    >
       <div className="w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16">
         {/* logo */}
         <div className="cursor-pointer md:w-32 w-20 md:h-32 h-20">
@@ -73,7 +81,7 @@ const Navbar = () => {
           </div>
         </div>
       )}
-    </nav>
+    </motion.nav>
   );
 };
 
