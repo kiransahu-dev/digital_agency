@@ -7,7 +7,7 @@ import {
   FaUserFriends,
   FaCameraRetro,
 } from "react-icons/fa";
-import { slideIn } from "../utils/motion";
+import { slideIn, staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 
 const Services = () => {
@@ -18,7 +18,7 @@ const Services = () => {
           <h1 className="font-bold text-[#a61040] text-4xl">Services</h1>
         </div>
         <motion.div
-          variants={slideIn("up", "tween", 0.3, 0.8)}
+          variants={staggerContainer(0.2, 0.1)}
           initial="hidden"
           animate="show"
           exit="hidden"
