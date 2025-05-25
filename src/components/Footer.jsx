@@ -91,7 +91,7 @@ const Footer = () => {
           <div className="mt-10 md:mt-0">
             <input
               type="email"
-              placeholder="Enter your Email"
+              placeholder="Enter your mail id"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
               className="text-gray-600 bg-white  w-fit sm:mr-5 mr-1 lg:mb-0 mb-4 py-2.5 rounded px-2 focus:outline-none"

@@ -81,13 +81,18 @@ const AboutUs = () => {
             </div>
 
             {/* Right side (Image) */}
-            <div className="md:w-[500px] md:h-[500px] mt-6 md:-mt-10">
+            <motion.div
+              variants={fadeIn("left", 0.6)}
+              initial="hidden"
+              whileInView="show"
+              className="md:w-[500px] md:h-[500px] mt-6 md:-mt-10"
+            >
               <img
                 src={story}
                 alt="hero/png"
                 className="w-full h-auto object-contain"
               />
-            </div>
+            </motion.div>
           </div>
         </div>
       </motion.section>
