@@ -1,4 +1,9 @@
 import React from "react";
+import {
+  MdOutlineEmail,
+  MdOutlinePhone,
+  MdOutlineLocationOn,
+} from "react-icons/md";
 
 const FooterItem = () => {
   const footerLinks = {
@@ -16,14 +21,14 @@ const FooterItem = () => {
     ],
     contactUs: [
       {
-        name: "LinkedIn",
-        href: "https://linkedin.com",
-        icon: "🔗",
+        name: "+91 9040765685",
+        href: "tel:+919040765685",
+        icon: <MdOutlinePhone />,
       },
       {
-        name: "Email",
-        href: "mailto:someone@example.com",
-        icon: "✉️",
+        name: "admin@ariesdigital.in",
+        href: "mailto:admin@ariesdigital.in",
+        icon: <MdOutlineEmail />,
       },
       {
         name: (
@@ -34,7 +39,7 @@ const FooterItem = () => {
           </>
         ),
         href: "",
-        icon: "📍",
+        icon: <MdOutlineLocationOn />,
       },
     ],
   };
@@ -55,18 +60,22 @@ const FooterItem = () => {
           <ul className="space-y-3">
             {links.map((link, index) => (
               <li key={index} className="flex items-center space-x-2">
-                {link.icon && <span>{link.icon}</span>}
+                {link.icon && (
+                  <span className="size-8 flex items-center justify-center hover:bg-pink-400 hover:text-gray-700 text-white rounded-full bg-[#a61040] transition-all duration-200">
+                    {link.icon}
+                  </span>
+                )}
                 {link.href ? (
                   <a
                     href={link.href}
-                    className="text-white/50 text-sm font-medium hover:text-gray-900"
+                    className="text-white/60 text-sm font-medium hover:text-white"
                     target="_blank"
                     rel="noopener noreferrer"
                   >
                     {link.name}
                   </a>
                 ) : (
-                  <span className="text-white/50 text-sm font-medium">
+                  <span className="text-white/60 text-sm font-medium hover:text-white">
                     {link.name}
                   </span>
                 )}
