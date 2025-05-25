@@ -3,93 +3,89 @@ import { motion } from "motion/react";
 import gd from "../assets/gd.jpg";
 import logo from "../assets/Logo2.jpg";
 import mabdem from "../assets/mabdem.jpg";
-import video from "../assets/video1.mp4";
+// import video from "../../video";
+// import video1 from "../../public/video/video1.mp4";
 
 const Portfolio = () => {
-  const [showSections, setShowSections] = useState(false);
+  const ourWorkData = [
+    {
+      category: "Graphic Design",
+      items: [
+        { title: "Brochure Design", image: mabdem },
+        { title: "Perfume Banner", image: gd },
+      ],
+    },
+    {
+      category: "Logo Design",
+      items: [
+        { title: "Mahalaxmi Logo", image: "/Logo2.jpg" },
+        { title: "Mabello Logo", image: "/Mabello Logo Final.jpg" },
+      ],
+    },
+    {
+      category: "Video Editing",
+      items: [
+        { title: "Showreel", video: "../../video/vdo.mp4" },
+        { title: "Brand Video", video: "../../video/video1.mp4" },
+      ],
+    },
+  ];
+
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    const timer = setTimeout(() => {
-      setShowSections(true);
-    }, 4000); // Delay for 4 seconds
-
-    return () => clearTimeout(timer);
+    setIsClient(true);
   }, []);
 
   return (
-    <section className="container mx-auto md:pt-44 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between" id="portfolio">
-      <div className="max-w-6xl mx-auto text-center">
-        <motion.h2
-          className="text-3xl font-bold dark:text-red-600 mb-12"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 1 }}
+    <>
+      <section className="px-4 py-12 md:px-16  md:pt-32 pt-10 " id="portfolio">
+        <h2
+          className="text-4xl font-bold text-center mb-12"
+          style={{ color: "#a61040" }}
         >
-          Our Journey So Far
-        </motion.h2>
+          Our Work
+        </h2>
 
-        {showSections && (
-          <motion.div
-            className="grid grid-cols-1 md:grid-cols-3 gap-10"
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 1 }}
-          >
-            <WorkCard
-              title="Video Editing"
-              description="We create compelling video content with smooth transitions and storytelling magic."
-              image={mabdem}
-            />
-            <WorkCard
-              title="Photo Editing"
-              description="Enhancing visual appeal with expert color correction and retouching."
-              image={logo}
-            />
-            <WorkCard
-              title="Logo Making"
-              description="Crafting memorable logos that capture your brand's identity and essence."
-              image={gd}
-            />
-          </motion.div>
-        )}
-      </div>
-    </section>
+        {ourWorkData.map((section) => (
+          <div key={section.category} className="mb-12">
+            <h3 className="text-2xl font-semibold mb-6">{section.category}</h3>
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+              {section.items.map((item, index) => (
+                <div
+                  key={index}
+                  className="rounded overflow-hidden shadow-lg group"
+                >
+                  {item.image ? (
+                    <img
+                      src={item.image}
+                      alt={item.title}
+                      className="w-full h-64 object-cover transition-transform group-hover:scale-105 duration-300"
+                    />
+                  ) : (
+                    isClient && (
+                      <video
+                        src={item.video}
+                        autoPlay
+                        muted
+                        loop
+                        playsInline
+                        className="w-full h-64 object-cover"
+                      />
+                    )
+                  )}
+
+                  <div className="p-4 bg-white">
+                    <h4 className="text-lg font-medium">{item.title}</h4>
+                  </div>
+                </div>
+              ))}
+            </div>
+          </div>
+        ))}
+      </section>
+    </>
   );
 };
-
-const WorkCard = ({ title, description, image }) => {
-  return (
-    <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
-      <div className="p-6">
-        <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-          {title}
-        </h3>
-        <p className="mt-3 text-gray-600 dark:text-gray-300">{description}</p>
-      </div>
-    </div>
-  );
-};
-
-// const WorkCard2 = ({ title, description, video }) => {
-//   return (
-//     <div className="bg-gray-800 rounded-2xl shadow-lg overflow-hidden hover:shadow-2xl transition">
-//       <video
-//         src={video}
-//         autoPlay
-//         loop
-//         muted
-//         playsInline
-//         className="w-full h-48 object-cover"
-//       />
-//       <div className="p-6">
-//         <h3 className="text-2xl font-semibold text-gray-800 dark:text-white">
-//           {title}
-//         </h3>
-//         <p className="mt-3 text-gray-600 dark:text-gray-300">{description}</p>
-//       </div>
-//     </div>
-//   );
-// };
 
 export default Portfolio;

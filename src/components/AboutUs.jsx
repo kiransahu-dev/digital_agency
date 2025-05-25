@@ -24,7 +24,7 @@ const AboutUs = () => {
           whileInView="show"
         >
           <motion.h3
-            variants={scale(0.4)}
+            variants={textVariant(0.4)}
             initial="hidden"
             whileInView="show"
             className="font-semibold md:text-xl text-medium pt-6 md:pt-14 "
