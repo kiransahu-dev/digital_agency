@@ -83,7 +83,7 @@ const Testimonial = () => {
     >
       <div className="container">
         {/* header sec */}
-        <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto md:mb-6">
+        <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto">
           <h1 className=" font-semibold text-[#a61040] md:text-4xl text-2xl tracking-wide">
             Client Testimonial
           </h1>
