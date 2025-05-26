@@ -25,7 +25,7 @@ const Footer = () => {
     }
 
     // Open email compose with the entered email in the body
-    window.location.href = `mailto:admin@example.com?subject=New Contact&body=My email is: ${encodeURIComponent(
+    window.location.href = `mailto:admin@ariesdigital.in?subject=New Contact&body=My email is: ${encodeURIComponent(
       email
     )}`;
   };

@@ -30,15 +30,6 @@ const Portfolio = () => {
         { title: "Mahalaxmi Logo", image: lg4 },
       ],
     },
-    {
-      category: "Motion Graphics",
-      items: [
-        { title: "Motion Animation", video: "../../video/vdo.mp4" },
-        { title: "HUD Animation", video: "../../video/vdo3.mp4" },
-        { title: "Showreel", video: "../../video/vdo4.mp4" },
-        { title: "Motion Animation", video: "../../video/video1.mp4" },
-      ],
-    },
   ];
 
   const [isClient, setIsClient] = useState(false);
@@ -49,7 +40,7 @@ const Portfolio = () => {
 
   return (
     <>
-      <section className="px-4 py-12 md:px-16  md:pt-32 pt-10 " id="portfolio">
+      <section className="px-4 py-14 md:px-16  md:pt-32 pt-10 " id="portfolio">
         <h2
           className="text-4xl font-bold text-center mb-12"
           style={{ color: "#a61040" }}

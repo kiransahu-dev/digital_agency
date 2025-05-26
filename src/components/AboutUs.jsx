@@ -11,7 +11,7 @@ const AboutUs = () => {
         variants={textVariant(0.2)}
         initial="hidden"
         whileInView="show"
-        className="container mx-auto pt-24 md:pt-32 px-4 sm:px-6 xl:px-14"
+        className="container mx-auto pt-24 md:pt-32 px-4 sm:px-6 sm:py-6 sm:mt-6 xl:px-14"
         id="aboutus"
       >
         {/* about */}

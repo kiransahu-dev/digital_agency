@@ -13,9 +13,14 @@ import { motion } from "framer-motion";
 const Services = () => {
   return (
     <>
-      <section className="container mx-auto md:pt-24 pt-10 px-4 mb-6" id="services">
+      <section
+        className="container mx-auto md:pt-32 pt-10 px-4 mb-10"
+        id="services"
+      >
         <div className="flex items-center justify-center">
-          <h1 className="font-bold text-[#a61040] text-4xl tracking-wide">Services</h1>
+          <h1 className="font-bold text-[#a61040] text-4xl tracking-wide">
+            Services
+          </h1>
         </div>
         <motion.div
           variants={staggerContainer(0.2, 0.1)}
@@ -34,8 +39,8 @@ const Services = () => {
               </h4>
               <p className="font-stretch-50% text-sm text-white/70">
                 Create scroll-stopping content, boost engagement, grow your
-                community, build your brand, engage your audience, and generate leads across platforms
-                like Instagram, Facebook, and LinkedIn.
+                community, build your brand, engage your audience, and generate
+                leads across platforms like Instagram, Facebook, and LinkedIn.
               </p>
             </div>
           </div>
@@ -90,7 +95,7 @@ const Services = () => {
             <div className="relative z-10 p-4 text-white">
               <FaPaintBrush size={35} color="#a61040" className="pb-3" />
               <h4 className="font-semibold text-lg pb-3">
-                  Branding and Graphic Designing
+                Branding and Graphic Designing
               </h4>
               <p className="font-stretch-50% text-sm text-white/70">
                 From logos to full brand identity — we make sure your brand
@@ -108,9 +113,9 @@ const Services = () => {
               </h4>
               <p className="font-stretch-50% text-sm text-white/70">
                 This brings your brand to life and boosts your conversion power.
-                Whether you're launching a new product, updating your website
-                or telling your brand story — our visuals are crafted to
-                connect, engage, and convert.
+                Whether you're launching a new product, updating your website or
+                telling your brand story — our visuals are crafted to connect,
+                engage, and convert.
               </p>
             </div>
           </div>
