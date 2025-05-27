@@ -78,7 +78,7 @@ const Testimonial = () => {
 
   return (
     <div
-      className="mb-10 container mx-auto md:pt-20 pt-14 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between"
+      className="mb-10 container mx-auto pt-8 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between"
       id="contactus"
     >
       <div className="container">
