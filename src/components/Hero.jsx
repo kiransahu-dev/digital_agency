@@ -8,23 +8,23 @@ import { fadeIn, textVariant } from "../utils/motion";
 const Hero = () => {
   return (
     <section
-      className="w-full h-[100vh] flex justify-center items-center bg-[#010101] text-white py-20"
+      className="w-full min-h-screen flex items-center bg-[#010101] text-white py-16 md:py-24"
       id="home"
     >
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-14 flex flex-col md:flex-row justify-between items-center">
-        {/* Left column */}
-        <div className="w-full md:w-1/2 space-y-8 gap-4">
+      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-14 flex flex-col md:flex-row items-center gap-12 md:gap-8">
+        {/* Left column - TEXT */}
+        <div className="w-full md:w-1/2 space-y-6 order-1 md:order-none">
           <motion.h1
             variants={textVariant(0.2)}
             initial="hidden"
             whileInView="show"
-            className="md:text-5xl text-3xl font-bold leading-tight"
+            className="text-3xl md:text-5xl font-bold leading-tight"
           >
             Welcome to{" "}
-            <span className="text-[#a61040] font-bold relative inline-block animate-pulse">
+            <span className="text-[#a61040] font-bold animate-pulse">
               Aries Digitals
             </span>
-            <p className="md:text-3xl text-xl mt-2 text-white font-medium">
+            <p className="text-xl md:text-3xl mt-2 text-white font-medium">
               Your Growth-Driven Digital Marketing Partner
             </p>
           </motion.h1>
@@ -46,15 +46,15 @@ const Hero = () => {
             variants={fadeIn("up", 0.6)}
             initial="hidden"
             whileInView="show"
-            className="font-semibold flex flex-col sm:flex-row gap-6"
+            className="font-semibold flex flex-col sm:flex-row gap-4 sm:gap-8"
           >
             <motion.div
               variants={fadeIn("right", 0.8)}
               initial="hidden"
               whileInView="show"
-              className="flex items-center gap-3 text-white"
+              className="flex items-center gap-2"
             >
-              <BsGraphUpArrow className="text-green-400 text-lg font-light" />
+              <BsGraphUpArrow className="text-green-400 text-lg" />
               Growth-Focused Strategies
             </motion.div>
 
@@ -62,25 +62,25 @@ const Hero = () => {
               variants={fadeIn("left", 0.8)}
               initial="hidden"
               whileInView="show"
-              className="flex items-center gap-3 text-white"
+              className="flex items-center gap-2"
             >
-              <BsGraphUpArrow className="text-green-400 text-lg font-light" />
+              <BsGraphUpArrow className="text-green-400 text-lg" />
               ROI-Focused Strategies
             </motion.div>
           </motion.div>
         </div>
 
-        {/* Right column */}
+        {/* Right column - IMAGE */}
         <motion.div
           variants={fadeIn("left", 0.6)}
           initial="hidden"
           whileInView="show"
-          className="w-full md:w-1/2 lg:flex lg:justify-center"
+          className="w-full md:w-1/2 flex justify-center order-2 md:order-none"
         >
           <img
             src={dgm}
             alt="digital marketing"
-            className="rounded-lg relative z-10 hover:scale-[1.02] transition-transform duration-300 mt-16 md:mt-20 pl-0 md:pl-20 lg:pl-0 shadow-2xl"
+            className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[450px] lg:max-w-[500px] rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
           />
         </motion.div>
       </div>
