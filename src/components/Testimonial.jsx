@@ -78,7 +78,7 @@ const Testimonial = () => {
 
   return (
     <div
-      className="py-14 mb-10 container mx-auto md:pt-32 pt-24 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between"
+      className="mb-10 container mx-auto md:pt-20 pt-14 pb-6 px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between"
       id="contactus"
     >
       <div className="container">
@@ -87,7 +87,6 @@ const Testimonial = () => {
           <h1 className=" font-semibold text-[#a61040] md:text-4xl text-2xl tracking-wide">
             Client Testimonial
           </h1>
-          {/* <p className="font-semibold text-3xl">What Our Client Say About Us</p> */}
         </div>
         {/* testimonial sec */}
         <div className="py-10 px-4 md:px-10">

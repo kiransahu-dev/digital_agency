@@ -11,7 +11,7 @@ const AboutUs = () => {
         variants={textVariant(0.2)}
         initial="hidden"
         whileInView="show"
-        className="container mx-auto pt-24 md:pt-32 px-4 sm:px-6 sm:py-6 sm:mt-6 xl:px-14"
+        className="ccontainer mx-auto pt-16 md:pt-20 px-4 sm:px-6 xl:px-14 scroll-mt-28"
         id="aboutus"
       >
         {/* about */}
@@ -30,7 +30,7 @@ const AboutUs = () => {
             variants={textVariant(0.4)}
             initial="hidden"
             whileInView="show"
-            className="font-bold md:text-2xl text-[16px] pt-6 md:pt-14 text-[#950e39] "
+            className="font-bold md:text-2xl text-[16px] pt-6 md:pt-10 text-[#950e39] "
           >
             We’re New, But We’re Not New to the Game - The Aries Digitals Story
           </motion.h3>

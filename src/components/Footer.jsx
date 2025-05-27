@@ -63,25 +63,25 @@ const Footer = () => {
                 href="https://www.facebook.com/profile.php?id=61558245320889"
                 target="_blank"
               >
-                <FaFacebookF className="size-8 hover:bg-pink-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#a61040] transition-all duration-200" />
+                <FaFacebookF className="size-8 hover:bg-blue-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#1877f2] transition-all duration-200" />
               </a>
               <a
                 href="https://www.instagram.com/ariesdigitals/"
                 target="_blank"
               >
-                <FaInstagram className="size-8 hover:bg-pink-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#a61040] transition-all duration-200" />
+                <FaInstagram className="size-8 hover:bg-pink-300 hover:text-gray-700 text-white rounded-full p-2 bg-[#E1306c] transition-all duration-200" />
               </a>
               <a
                 href="https://www.linkedin.com/company/ariesdigitals/?viewAsMember=true"
                 target="_blank"
               >
-                <FaLinkedinIn className="size-8 hover:bg-pink-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#a61040] transition-all duration-200" />
+                <FaLinkedinIn className="size-8 hover:bg-blue-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#0077B5] transition-all duration-200" />
               </a>
               <a
                 href="https://api.whatsapp.com/message/MUUOX7GWBSCCF1?autoload=1&app_absent=0"
                 target="_blank"
               >
-                <FaWhatsapp className="size-8 hover:bg-pink-400 hover:text-gray-700 text-white rounded-full p-2 bg-[#a61040] transition-all duration-200" />
+                <FaWhatsapp className="size-8 hover:bg-green-300 hover:text-gray-700 text-white rounded-full p-2 bg-[#25d366] transition-all duration-200" />
               </a>
             </div>
           </div>

@@ -14,7 +14,7 @@ const Services = () => {
   return (
     <>
       <section
-        className="container mx-auto md:pt-32 pt-10 px-4 mb-10"
+        className="container mx-auto md:pt-20 pt-14 px-4 mb-14 scroll-mt-28"
         id="services"
       >
         <div className="flex items-center justify-center">
@@ -27,7 +27,7 @@ const Services = () => {
           initial="hidden"
           animate="show"
           exit="hidden"
-          className="grid md:grid-cols-3 grid-cols-1 gap-6 items-center justify-center pt-6 md:pt-14 "
+          className="grid md:grid-cols-3 grid-cols-1 gap-6 items-center justify-center pt-10"
         >
           <div className="relative w-full h-full overflow-hidden rounded-lg bg-black/90 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
