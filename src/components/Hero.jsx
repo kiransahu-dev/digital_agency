@@ -11,9 +11,9 @@ const Hero = () => {
       className="w-full min-h-screen flex items-center bg-[#010101] text-white py-16 md:py-24"
       id="home"
     >
-      <div className="max-w-screen-xl mx-auto px-4 sm:px-6 xl:px-14 flex flex-col md:flex-row items-center gap-12 md:gap-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-14 flex flex-col md:flex-row items-center gap-12 md:gap-8">
         {/* Left column - TEXT */}
-        <div className="w-full md:w-1/2 space-y-6 order-1 md:order-none">
+        <div className="w-full md:w-1/2 space-y-6 order-1 md:order-0">
           <motion.h1
             variants={textVariant(0.2)}
             initial="hidden"
@@ -24,9 +24,14 @@ const Hero = () => {
             <span className="text-[#a61040] font-bold animate-pulse">
               Aries Digitals
             </span>
-            <p className="text-xl md:text-3xl mt-2 text-white font-medium">
-              Your Growth-Driven Digital Marketing Partner
-            </p>
+            <motion.h3
+              variants={textVariant(0.4)}
+              initial="hidden"
+              whileInView="show"
+              className="font-semibold md:text-2xl text-[22px] pt-6 md:pt-10 text-white"
+            >
+              The Growth Engine for 38+ Leading Brands.
+            </motion.h3>
           </motion.h1>
 
           <motion.p
@@ -75,12 +80,12 @@ const Hero = () => {
           variants={fadeIn("left", 0.6)}
           initial="hidden"
           whileInView="show"
-          className="w-full md:w-1/2 flex justify-center order-2 md:order-none"
+          className="w-full md:w-1/2 flex justify-center order-2 md:order-0"
         >
           <img
             src={dgm}
             alt="digital marketing"
-            className="w-full max-w-[400px] sm:max-w-[500px] md:max-w-[450px] lg:max-w-[500px] rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
+            className="w-full max-w-100 sm:max-w-125 md:max-w-112.5 lg:max-w-125 rounded-lg shadow-2xl transition-transform duration-300 hover:scale-105"
           />
         </motion.div>
       </div>
