@@ -1,6 +1,10 @@
+/* Google Font */
 @import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+
+/* Tailwind (keep if you're using it globally) */
 @import "tailwindcss";
-/* Set default font and enable smooth scrolling */
+
+/* Base Styles */
 html {
   font-family: "Inter", sans-serif;
   scroll-behavior: smooth;
@@ -8,4 +12,151 @@ html {
 
 body {
   @apply bg-white text-black;
+}
+
+/* ========================= */
+/* 🔥 BRAND SLIDER SECTION */
+/* ========================= */
+
+/* ========================= */
+/* 🔥 BRAND SLIDER SECTION */
+/* ========================= */
+
+.brand-container {
+  overflow: hidden;
+  background: #050505;
+  padding: 20px 0;
+  position: relative;
+}
+
+/* Track */
+.brand-track {
+  display: flex;
+  align-items: center;
+  width: max-content;
+
+  /* 🔥 NEW ANIMATION */
+  animation: scrollPause 30s ease-in-out infinite;
+}
+
+/* 🔥 STEP PAUSE ANIMATION */
+@keyframes scrollPause {
+  0% {
+    transform: translateX(0);
+  }
+
+  /* pause */
+  8% {
+    transform: translateX(0);
+  }
+
+  /* move */
+  18% {
+    transform: translateX(-10%);
+  }
+
+  /* pause */
+  28% {
+    transform: translateX(-10%);
+  }
+
+  /* move */
+  38% {
+    transform: translateX(-20%);
+  }
+
+  /* pause */
+  48% {
+    transform: translateX(-20%);
+  }
+
+  /* move */
+  58% {
+    transform: translateX(-30%);
+  }
+
+  /* pause */
+  68% {
+    transform: translateX(-30%);
+  }
+
+  /* move */
+  78% {
+    transform: translateX(-40%);
+  }
+
+  /* pause */
+  88% {
+    transform: translateX(-40%);
+  }
+
+  /* reset */
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* 🔥 FIXED LOGO BOX */
+.brand-item {
+  width: 160px;              /* ✅ fixed width */
+  height: 80px;              /* ✅ fixed height */
+  margin: 0 25px;
+  padding: 10px;
+  background: #000000;       /* optional clean bg */
+  border-radius: 12px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  opacity: 0.8;
+  transition: all 0.3s ease;
+}
+
+/* IMAGE INSIDE BOX */
+.brand-item img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  filter: grayscale(30%) brightness(1.1);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* Hover */
+.brand-item:hover {
+  opacity: 1;
+  transform: scale(1.08);
+}
+
+.brand-item:hover img {
+  filter: grayscale(0%) brightness(1.2);
+  opacity: 1;
+}
+
+/* Pause on hover */
+.brand-container:hover .brand-track {
+  animation-play-state: paused;
+}
+
+/* Animation */
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+/* Gradient edges */
+.brand-container::before,
+.brand-container::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  width: 120px;
+  height: 100%;
+  z-index: 2;
+  pointer-events: none;
 }

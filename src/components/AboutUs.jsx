@@ -85,11 +85,11 @@ const AboutUs = () => {
               variants={fadeIn("left", 0.6)}
               initial="hidden"
               whileInView="show"
-              className="md:w-[500px] md:h-[500px] mt-6 md:-mt-10"
+              className="md:w-125 md:h-125 mt-6 md:-mt-10"
             >
               <img
                 src={story}
-                alt="hero/png"
+                alt="Aries Digitals digital marketing agency story"
                 className="w-full h-auto object-contain"
               />
             </motion.div>

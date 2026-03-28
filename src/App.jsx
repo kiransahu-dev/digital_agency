@@ -1,6 +1,7 @@
 import React from "react";
 import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
+import BrandSlide from "./components/BrandSlide";
 import Testimonial from "./components/Testimonial";
 import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
@@ -16,6 +17,7 @@ const App = () => {
         <div className="overflow-auto">
           <Navbar />
           <Hero />
+          <BrandSlide/>
           <AboutUs />
           <Services />
           <Portfolio />
