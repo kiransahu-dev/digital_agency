@@ -6,7 +6,7 @@ import img2 from "../assets/team/Rashmita.png";
 import img3 from "../assets/team/Rohini.jpeg";
 import img4 from "../assets/team/Samanwita.jpeg";
 import img5 from "../assets/team/Sibani.jpeg";
-import img6 from "../assets/team/Swayam.jpeg";
+import img6 from "../assets/team/swayam.jpeg";
 
 const teamData = [
   {
