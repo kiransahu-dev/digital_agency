@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import logo from "../assets/logo-footer.png";
-// import logo from "../assets/flu.png";
+import logo from "../assets/Logo-footer.png";
 import {
   FaFacebookF,
   FaInstagram,
@@ -26,7 +25,7 @@ const Footer = () => {
 
     // Open email compose with the entered email in the body
     window.location.href = `mailto:admin@ariesdigital.in?subject=New Contact&body=My email is: ${encodeURIComponent(
-      email
+      email,
     )}`;
   };
   return (
