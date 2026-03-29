@@ -13,22 +13,27 @@ const Navbar = () => {
     { href: "#home", label: "Home" },
     { href: "#aboutus", label: "Our Story" },
     { href: "#services", label: "Services" },
-    { href: "#portfolio", label: "Our Works" },
+    { href: "#team", label: "Our Team" },
     { href: "#contactus", label: "Contact Us" },
   ];
 
   // Scrollspy effect
   useEffect(() => {
     const handleScroll = () => {
-      const scrollPosition = window.scrollY + window.innerHeight / 2;
+      const scrollY = window.scrollY;
 
-      for (let i = navLinks.length - 1; i >= 0; i--) {
-        const section = document.querySelector(navLinks[i].href);
-        if (section && section.offsetTop <= scrollPosition) {
-          setActiveLink(navLinks[i].href);
-          break;
+      navLinks.forEach((link) => {
+        const section = document.querySelector(link.href);
+
+        if (section) {
+          const sectionTop = section.offsetTop - 120; // 👈 offset for navbar
+          const sectionHeight = section.offsetHeight;
+
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            setActiveLink(link.href);
+          }
         }
-      }
+      });
     };
 
     window.addEventListener("scroll", handleScroll);
@@ -39,8 +44,14 @@ const Navbar = () => {
   const handleClick = (e, href) => {
     e.preventDefault();
     const section = document.querySelector(href);
+
     if (section) {
-      section.scrollIntoView({ behavior: "smooth" });
+      const yOffset = -100; // navbar height
+      const y =
+        section.getBoundingClientRect().top + window.pageYOffset + yOffset;
+
+      window.scrollTo({ top: y, behavior: "smooth" });
+
       setActiveLink(href);
       setIsMenuOpen(false);
     }

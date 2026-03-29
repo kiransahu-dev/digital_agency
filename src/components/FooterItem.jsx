@@ -11,7 +11,7 @@ const FooterItem = () => {
       { name: "Home", href: "#home" },
       { name: "About Us", href: "#aboutus" },
       { name: "Services", href: "#services" },
-      { name: "Portfolio", href: "#portfolio" },
+      { name: "Team", href: "#team" },
       { name: "Contact Us", href: "#contactus" },
     ],
     support: [

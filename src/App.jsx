@@ -3,11 +3,11 @@ import Navbar from "./components/Navbar";
 import Hero from "./components/Hero";
 import BrandSlide from "./components/BrandSlide";
 import Testimonial from "./components/Testimonial";
-import ContactUs from "./components/ContactUs";
 import AboutUs from "./components/AboutUs";
 import Services from "./components/Services";
 import Portfolio from "./components/Portfolio";
 import Footer from "./components/Footer";
+import Team from "./components/Team";
 
 const App = () => {
   return (
@@ -17,10 +17,11 @@ const App = () => {
         <div className="overflow-auto">
           <Navbar />
           <Hero />
-          <BrandSlide/>
+          <BrandSlide />
           <AboutUs />
           <Services />
-          <Portfolio />
+          <Team />
+          {/* <Portfolio /> */}
           <Testimonial />
           {/* <ContactUs /> */}
           <Footer />

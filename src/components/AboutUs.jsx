@@ -11,7 +11,7 @@ const AboutUs = () => {
         variants={textVariant(0.2)}
         initial="hidden"
         whileInView="show"
-        className="ccontainer mx-auto pt-16 md:pt-20 px-4 sm:px-6 xl:px-14 scroll-mt-28"
+        className="ccontainer max-w-7xl mx-auto pt-16 md:pt-20 px-4 sm:px-6 xl:px-14 scroll-mt-28"
         id="aboutus"
       >
         {/* about */}
@@ -85,7 +85,7 @@ const AboutUs = () => {
               variants={fadeIn("left", 0.6)}
               initial="hidden"
               whileInView="show"
-              className="md:w-125 md:h-125 mt-6 md:-mt-10"
+              className="md:w-125 mt-6 md:-mt-6"
             >
               <img
                 src={story}
