@@ -45,7 +45,7 @@ const brands = [
 
 const BrandSlide = () => {
   return (
-    <div className="brand-container">
+    <div className="brand-container" id="brands">
       <div className="relative w-full overflow-hidden">
         <div className="brand-track">
           {[...brands, ...brands].map((logo, index) => (

@@ -83,7 +83,7 @@ const Testimonial = () => {
     >
       <div className="container">
         {/* header sec */}
-        <div className="space-y-4 p-6 text-center max-w-[600px] mx-auto">
+        <div className="space-y-4 p-6 text-center max-w-150 mx-auto">
           <h1 className=" font-semibold text-[#a61040] md:text-4xl text-2xl tracking-wide">
             Client Testimonial
           </h1>
@@ -93,7 +93,8 @@ const Testimonial = () => {
           <Slider {...setting}>
             {TestimonialData.map((item) => (
               <div key={item.id} className="px-2 h-full">
-                <div className="flex flex-col justify-between h-full min-h-[250px] max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[#700d28] text-white transition-all duration-300 hover:shadow-2xl">
+                <div className="flex flex-col justify-between h-full min-h-62.5 max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[linear-gradient(60deg,#29323c_0%,#485563_100%)] text-white transition-all duration-300 hover:shadow-2xl">
+                  {" "}
                   {/* Top */}
                   <div className="flex items-center gap-4">
                     <img
@@ -104,14 +105,13 @@ const Testimonial = () => {
                     <div>
                       <p className="text-lg font-semibold">{item.name}</p>
                       {item.role && (
-                        <p className="text-md  text-white/80">{item.role}</p>
+                        <p className="text-md text-white/80">{item.role}</p>
                       )}
                     </div>
                   </div>
-
                   {/* Bottom */}
                   <div className="mt-4">
-                    <p className="text-sm leading-relaxed tracking-wide min-h-[100px]">
+                    <p className="text-sm leading-relaxed tracking-wide min-h-25">
                       {item.text}
                     </p>
                   </div>

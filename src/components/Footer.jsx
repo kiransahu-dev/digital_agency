@@ -30,7 +30,7 @@ const Footer = () => {
   };
   return (
     <footer className="bg-[#00000c] text-white" id="contactus">
-      <div className="w-full bg-[#ffffff19] py-8 px-4 sm:px-6 md:px-10 xl:px-20">
+      <div className="w-full bg-[#1b1b1b19] py-8 px-4 sm:px-6 md:px-10 xl:px-20">
         <div className="flex flex-col xl:flex-row gap-10 xl:gap-20">
           {/* Left Section */}
           <div className="flex-1 flex flex-col gap-4">
@@ -44,7 +44,7 @@ const Footer = () => {
                 className="w-24 h-24 object-contain"
               />
               <p
-                className="text-xl font-light uppercase tracking-[0.1em]"
+                className="text-xl font-light uppercase tracking-widest"
                 style={{
                   textShadow: `
                 0 0 5px #a61040,

@@ -49,35 +49,38 @@ const teamData = [
 
 const Team = () => {
   return (
-    <section className="max-w-6xl mx-auto py-16 px-6" id="team">
-      {/* Heading */}
-      <h2 className="text-center text-4xl font-bold text-[#a61040] mb-12">
-        Our Team
-      </h2>
+    <div className="">
+      <section className="max-w-6xl mx-auto py-16 px-6" id="team">
+        <h2 className="text-center text-4xl font-bold text-[#a61040] mb-16">
+          Our Team
+        </h2>
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-6 gap-8 justify-items-center">
+          {teamData.map((member, index) => (
+            <div
+              key={index}
+              className={`
+              w-44 h-100
+              rounded-full overflow-hidden
+              flex flex-col justify-between items-center text-center
+              shadow-lg ${member.color}
+              ${index % 2 === 0 ? "-translate-y-6" : "translate-y-6"} 
+            `}
+            >
+              <img
+                src={member.image}
+                alt={member.name}
+                className="w-full h-[65%] object-cover"
+              />
 
-      {/* Cards */}
-      <div className="flex flex-wrap justify-center items-end gap-6">
-        {teamData.map((member, index) => (
-          <div
-            key={index}
-            className={`w-40 h-95 rounded-full overflow-hidden flex flex-col justify-between items-center text-center shadow-lg ${member.color} hover:scale-105 transition duration-300`}
-          >
-            {/* Image */}
-            <img
-              src={member.image}
-              alt={member.name}
-              className="w-full h-[65%] object-cover"
-            />
-
-            {/* Info */}
-            <div className="pb-6 px-2">
-              <h3 className="font-semibold text-sm">{member.name}</h3>
-              <p className="text-xs text-gray-700">{member.role}</p>
+              <div className="pb-6 px-3">
+                <h3 className="font-semibold text-sm">{member.name}</h3>
+                <p className="text-xs text-gray-700">{member.role}</p>
+              </div>
             </div>
-          </div>
-        ))}
-      </div>
-    </section>
+          ))}
+        </div>
+      </section>
+    </div>
   );
 };
 

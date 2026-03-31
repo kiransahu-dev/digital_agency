@@ -1,4 +1,4 @@
-import { useState, useEffect, useRef } from "react";
+import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { fadeIn } from "../utils/motion";
 import { HiX } from "react-icons/hi";
@@ -17,7 +17,7 @@ const Navbar = () => {
     { href: "#contactus", label: "Contact Us" },
   ];
 
-  // Scrollspy effect
+  // Scrollspy
   useEffect(() => {
     const handleScroll = () => {
       const scrollY = window.scrollY;
@@ -26,7 +26,7 @@ const Navbar = () => {
         const section = document.querySelector(link.href);
 
         if (section) {
-          const sectionTop = section.offsetTop - 120; // 👈 offset for navbar
+          const sectionTop = section.offsetTop - 120;
           const sectionHeight = section.offsetHeight;
 
           if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
@@ -38,15 +38,15 @@ const Navbar = () => {
 
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, []);
+  }, [navLinks]);
 
-  // Smooth scroll on click
+  // Smooth scroll
   const handleClick = (e, href) => {
     e.preventDefault();
     const section = document.querySelector(href);
 
     if (section) {
-      const yOffset = -100; // navbar height
+      const yOffset = -100;
       const y =
         section.getBoundingClientRect().top + window.pageYOffset + yOffset;
 
@@ -62,52 +62,56 @@ const Navbar = () => {
       variants={fadeIn("down", 0.2)}
       initial="hidden"
       whileInView="show"
-      viewport={{ once: true }}
-      className="fixed top-0 left-0 right-0 z-50 shadow-md bg-white/90 border-b backdrop-blur-sm border-gray-100"
+      className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md shadow-md border-b border-gray-200"
     >
-      <div className="w-full container mx-auto flex items-center justify-between px-4 sm:px-6 lg:px-8 md:h-20 h-16">
-        {/* logo */}
-        <a href="#home" onClick={() => setActiveLink("#home")}>
-          <div className="cursor-pointer md:w-32 w-20 md:h-32 h-20">
-            <img src={logo} alt="logo/png" />
-          </div>
+      <div className="max-w-7xl mx-auto flex items-center justify-between px-6 h-16 md:h-20">
+        {/* LOGO */}
+        <a href="#home" onClick={(e) => handleClick(e, "#home")}>
+          <img src={logo} alt="logo" className="w-24 md:w-32 cursor-pointer" />
         </a>
 
-        {/* desktop nav */}
-        <div className="hidden md:flex gap-8 items-center text-gray-700 font-medium">
+        {/* DESKTOP MENU */}
+        <div className="hidden md:flex gap-8 items-center font-medium">
           {navLinks.map((link, index) => (
             <a
               key={index}
               href={link.href}
               onClick={(e) => handleClick(e, link.href)}
-              className={`text-md font-medium relative after:absolute after:bottom-0 after:left-0 after:h-0.5 after:w-0 hover:after:w-full after:bg-red-700 after:transition-all ${
+              className={`relative group pb-1 transition-colors duration-300 ${
                 activeLink === link.href
-                  ? "text-red-700 after:w-full"
-                  : "text-gray-700 hover:text-gray-900"
+                  ? "text-red-700"
+                  : "text-gray-700 hover:text-red-700"
               }`}
             >
               {link.label}
+
+              {/* 🔥 UNDERLINE */}
+              <span
+                className={`absolute left-0 -bottom-1 h-0.5 bg-red-700 transition-all duration-300 ${
+                  activeLink === link.href ? "w-full" : "w-0 group-hover:w-full"
+                }`}
+              />
             </a>
           ))}
         </div>
 
-        {/* mobile menu button */}
+        {/* MOBILE BUTTON */}
         <button
           className="md:hidden"
           onClick={() => setIsMenuOpen(!isMenuOpen)}
         >
           {isMenuOpen ? (
-            <HiX className="size-6 text-red-700" />
+            <HiX className="text-red-700 text-2xl" />
           ) : (
-            <IoMdMenu className="size-6 text-red-700" />
+            <IoMdMenu className="text-red-700 text-2xl" />
           )}
         </button>
       </div>
 
-      {/* mobile menu items */}
+      {/* MOBILE MENU */}
       {isMenuOpen && (
-        <div className="md:hidden bg-white border-t border-gray-100 py-4">
-          <div className="container mx-auto px-6 space-y-3">
+        <div className="md:hidden bg-white border-t border-gray-200 py-4">
+          <div className="px-6 space-y-3">
             {navLinks.map((link, index) => (
               <a
                 key={index}

@@ -14,9 +14,31 @@ body {
   @apply bg-white text-black;
 }
 
-/* ========================= */
-/* 🔥 BRAND SLIDER SECTION */
-/* ========================= */
+/* Jugnu effect in service */
+.firefly {
+  position: absolute;
+  width: 2px;
+  height: 2px;
+  background: #0ee6c2;
+  border-radius: 50%;
+  opacity: 0;
+  box-shadow:
+    0 0 8px #18cbeb,
+    0 0 15px #0adfe6;
+  animation: blink 3s infinite ease-in-out;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0.5);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+}
 
 /* ========================= */
 /* 🔥 BRAND SLIDER SECTION */
@@ -24,139 +46,90 @@ body {
 
 .brand-container {
   overflow: hidden;
-  background: #050505;
+  background: rgb(0, 9, 10);
   padding: 20px 0;
   position: relative;
 }
 
-/* Track */
+/* TRACK */
 .brand-track {
   display: flex;
   align-items: center;
+  gap: 60px;
   width: max-content;
 
-  /* 🔥 NEW ANIMATION */
+  /* ✅ APPLY ANIMATION */
   animation: scrollPause 30s ease-in-out infinite;
+}
+
+/* ITEMS */
+.brand-item {
+  width: 180px;
+  height: 100px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  background: transparent;
+}
+
+/* LOGOS */
+.brand-item img {
+  max-width: 100%;
+  max-height: 70px;
+  object-fit: contain;
+
+  filter: brightness(0.9) contrast(1.1);
+  opacity: 0.9;
+  transition: all 0.3s ease;
+}
+
+/* HOVER */
+.brand-item:hover img {
+  transform: scale(1.1);
+  filter: brightness(1.1) contrast(1.2);
+  opacity: 1;
 }
 
 /* 🔥 STEP PAUSE ANIMATION */
 @keyframes scrollPause {
   0% {
     transform: translateX(0);
-  }
-
-  /* pause */
+  } /* pause */
   8% {
     transform: translateX(0);
-  }
-
-  /* move */
+  } /* move */
   18% {
     transform: translateX(-10%);
-  }
-
-  /* pause */
+  } /* pause */
   28% {
     transform: translateX(-10%);
-  }
-
-  /* move */
+  } /* move */
   38% {
     transform: translateX(-20%);
-  }
-
-  /* pause */
+  } /* pause */
   48% {
     transform: translateX(-20%);
-  }
-
-  /* move */
+  } /* move */
   58% {
     transform: translateX(-30%);
-  }
-
-  /* pause */
+  } /* pause */
   68% {
     transform: translateX(-30%);
-  }
-
-  /* move */
+  } /* move */
   78% {
     transform: translateX(-40%);
-  }
-
-  /* pause */
+  } /* pause */
   88% {
     transform: translateX(-40%);
-  }
-
-  /* reset */
+  } /* reset */
   100% {
     transform: translateX(-50%);
   }
 }
 
-/* 🔥 FIXED LOGO BOX */
-.brand-item {
-  width: 160px;              /* ✅ fixed width */
-  height: 80px;              /* ✅ fixed height */
-  margin: 0 25px;
-  padding: 10px;
-  background: #000000;       /* optional clean bg */
-  border-radius: 12px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  opacity: 0.8;
-  transition: all 0.3s ease;
-}
-
-/* IMAGE INSIDE BOX */
-.brand-item img {
-  max-width: 100%;
-  max-height: 100%;
-  object-fit: contain;
-  filter: grayscale(30%) brightness(1.1);
-  opacity: 0.9;
-  transition: all 0.3s ease;
-}
-
-/* Hover */
-.brand-item:hover {
-  opacity: 1;
-  transform: scale(1.08);
-}
-
-.brand-item:hover img {
-  filter: grayscale(0%) brightness(1.2);
-  opacity: 1;
-}
-
-/* Pause on hover */
+/* PAUSE ON HOVER */
 .brand-container:hover .brand-track {
   animation-play-state: paused;
-}
-
-/* Animation */
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-50%);
-  }
-}
-
-/* Gradient edges */
-.brand-container::before,
-.brand-container::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  width: 120px;
-  height: 100%;
-  z-index: 2;
-  pointer-events: none;
 }

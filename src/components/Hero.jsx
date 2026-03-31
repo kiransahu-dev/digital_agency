@@ -2,7 +2,7 @@ import React from "react";
 // import dgm from "../assets/home.jpg";
 import dgm from "../assets/dma.png";
 import { BsGraphUpArrow } from "react-icons/bs";
-import { motion } from "motion/react";
+import { motion } from "framer-motion";
 import { fadeIn, textVariant } from "../utils/motion";
 
 const Hero = () => {
