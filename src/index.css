@@ -14,31 +14,6 @@ body {
   @apply bg-white text-black;
 }
 
-/* Jugnu effect in service */
-.firefly {
-  position: absolute;
-  width: 2px;
-  height: 2px;
-  background: #0ee6c2;
-  border-radius: 50%;
-  opacity: 0;
-  box-shadow:
-    0 0 8px #18cbeb,
-    0 0 15px #0adfe6;
-  animation: blink 3s infinite ease-in-out;
-}
-
-@keyframes blink {
-  0%,
-  100% {
-    opacity: 0;
-    transform: scale(0.5);
-  }
-  50% {
-    opacity: 1;
-    transform: scale(1.2);
-  }
-}
 
 /* ========================= */
 /* 🔥 BRAND SLIDER SECTION */
@@ -46,20 +21,31 @@ body {
 
 .brand-container {
   overflow: hidden;
-  background: rgb(0, 9, 10);
-  padding: 20px 0;
-  position: relative;
+  background: #53515100;
+  padding: 40px 0;
+}
+
+/* EACH ROW */
+.brand-row {
+  overflow: hidden;
+  margin: 15px 0;
 }
 
 /* TRACK */
 .brand-track {
   display: flex;
-  align-items: center;
-  gap: 60px;
+  gap: 50px;
   width: max-content;
+}
 
-  /* ✅ APPLY ANIMATION */
-  animation: scrollPause 30s ease-in-out infinite;
+/* RIGHT SCROLL (TOP) */
+.brand-track.right {
+  animation: scrollRight 25s linear infinite;
+}
+
+/* LEFT SCROLL (BOTTOM) */
+.brand-track.left {
+  animation: scrollLeft 25s linear infinite;
 }
 
 /* ITEMS */
@@ -71,61 +57,45 @@ body {
   align-items: center;
   justify-content: center;
 
-  background: transparent;
+  background: rgb(0, 0, 0);
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.08);
 }
 
 /* LOGOS */
 .brand-item img {
-  max-width: 100%;
-  max-height: 70px;
+  max-width: 120px;
+  max-height: 60px;
   object-fit: contain;
-
-  filter: brightness(0.9) contrast(1.1);
-  opacity: 0.9;
+  opacity: 0.8;
   transition: all 0.3s ease;
 }
 
 /* HOVER */
 .brand-item:hover img {
   transform: scale(1.1);
-  filter: brightness(1.1) contrast(1.2);
   opacity: 1;
 }
 
-/* 🔥 STEP PAUSE ANIMATION */
-@keyframes scrollPause {
+/* 🔥 ANIMATIONS */
+
+/* LEFT */
+@keyframes scrollLeft {
   0% {
     transform: translateX(0);
-  } /* pause */
-  8% {
-    transform: translateX(0);
-  } /* move */
-  18% {
-    transform: translateX(-10%);
-  } /* pause */
-  28% {
-    transform: translateX(-10%);
-  } /* move */
-  38% {
-    transform: translateX(-20%);
-  } /* pause */
-  48% {
-    transform: translateX(-20%);
-  } /* move */
-  58% {
-    transform: translateX(-30%);
-  } /* pause */
-  68% {
-    transform: translateX(-30%);
-  } /* move */
-  78% {
-    transform: translateX(-40%);
-  } /* pause */
-  88% {
-    transform: translateX(-40%);
-  } /* reset */
+  }
   100% {
     transform: translateX(-50%);
+  }
+}
+
+/* RIGHT */
+@keyframes scrollRight {
+  0% {
+    transform: translateX(-50%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }
 

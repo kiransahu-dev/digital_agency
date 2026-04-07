@@ -93,7 +93,7 @@ const Testimonial = () => {
           <Slider {...setting}>
             {TestimonialData.map((item) => (
               <div key={item.id} className="px-2 h-full">
-                <div className="flex flex-col justify-between h-full min-h-62.5 max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[linear-gradient(60deg,#29323c_0%,#485563_100%)] text-white transition-all duration-300 hover:shadow-2xl">
+                <div className="flex flex-col justify-between h-full min-h-62.5 max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[#720a2b] text-white transition-all duration-300 hover:shadow-2xl">
                   {" "}
                   {/* Top */}
                   <div className="flex items-center gap-4">

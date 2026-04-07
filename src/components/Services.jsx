@@ -7,28 +7,14 @@ import {
   FaCameraRetro,
 } from "react-icons/fa";
 import { FaMeta } from "react-icons/fa6";
-import { slideIn, staggerContainer } from "../utils/motion";
+import { staggerContainer } from "../utils/motion";
 import { motion } from "framer-motion";
 import "../index.css";
 
 const Services = () => {
   return (
-    <div className="relative bg-black overflow-hidden" id="services">
-      {/* 🔥 Fireflies (Jugnu Effect) */}
-      <div className="absolute inset-0 z-0 pointer-events-none">
-        {[...Array(480)].map((_, i) => (
-          <span
-            key={i}
-            className="firefly"
-            style={{
-              top: `${Math.random() * 100}%`,
-              left: `${Math.random() * 100}%`,
-              animationDelay: `${Math.random() * 5}s`,
-            }}
-          />
-        ))}
-      </div>
-      <section className="relative z-10 max-w-7xl mx-auto md:px-18 py-14 px-6 scroll-mt-28">
+    <div className="overflow-hidden" id="services">
+      <section className="relative max-w-7xl mx-auto md:px-18 py-14 px-6 scroll-mt-28">
         <div className="flex items-center justify-center">
           <h1 className="font-bold text-[#a61040] text-4xl tracking-wide">
             Services
@@ -41,7 +27,7 @@ const Services = () => {
           exit="hidden"
           className="grid md:grid-cols-3 sm:grid-cols-2 grid-cols-1 gap-8 pt-10 place-items-center"
         >
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">
@@ -56,7 +42,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">
@@ -71,7 +57,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">
@@ -86,7 +72,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">
@@ -101,7 +87,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">
@@ -115,7 +101,7 @@ const Services = () => {
               </p>
             </div>
           </div>
-          <div className="relative w-full h-full overflow-hidden rounded-lg bg-white/12 backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
+          <div className="relative w-full h-full overflow-hidden rounded-lg bg-black backdrop-blur-md border border-white/20 shadow-lg transition-all duration-300 group hover:scale-[1.02]">
             {/* Shine animation overlay */}
             <div className="absolute top-0 -left-full w-full h-full bg-linear-to-r from-transparent via-red-600/75 to-transparent transform rotate-25 blur-sm opacity-0 transition-all duration-1000 group-hover:left-full group-hover:opacity-100"></div>
             <div className="relative z-10 p-4 text-white">

@@ -65,7 +65,7 @@ const Portfolio = () => {
               className="mb-16"
             >
               {/* Wrapper to align title with grid */}
-              <div className="max-w-[1040px] w-full mx-auto px-2">
+              <div className="max-w-260 w-full mx-auto px-2">
                 <motion.h3
                   variants={fadeIn("up", 0.35 + i * 0.2)}
                   className="text-lg sm:text-xl md:text-2xl lg:text-3xl font-semibold mb-6 text-[#950E39]"
