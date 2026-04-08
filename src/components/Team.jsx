@@ -11,46 +11,39 @@ import img7 from "../assets/team/Kumar Swayam_CEO.png";
 
 const teamData = [
   {
+    name: "T. Sibani Patra",
+    role: "Social Media Manager",
+    image: img5,
+  },
+  {
     name: "Kuldeep Acharya",
     role: "Post Production Specialist",
     image: img1,
-    color: "bg-pink-200",
-  },
-  {
-    name: "Rashmita Ku. Nayak",
-    role: "Junior Graphic Designer",
-    image: img2,
-    color: "bg-gray-200",
-  },
-  {
-    name: "Rohini Krishna",
-    role: "Motion Graphic Artist",
-    image: img3,
-    color: "bg-yellow-300",
   },
   {
     name: "Samanwita Sahu",
     role: "Senior Graphic Designer",
     image: img4,
-    color: "bg-blue-200",
   },
   {
-    name: "T. Sibani Patra",
-    role: "Social Media Manager",
-    image: img5,
-    color: "bg-green-200",
+    name: "Rashmita Ku. Nayak",
+    role: "Junior Graphic Designer",
+    image: img2,
+  },
+  {
+    name: "Rohini Krishna",
+    role: "Motion Graphic Artist",
+    image: img3,
   },
   {
     name: "Jagadish Sahu",
     role: "Director",
     image: img6,
-    color: "bg-blue-200",
   },
   {
     name: "Kumar Swayam",
     role: "CEO",
     image: img7,
-    color: "bg-blue-200",
   },
 ];
 
@@ -64,13 +57,11 @@ const Team = () => {
         </h2>
 
         {/* GRID */}
-        <div className="flex flex-wrap justify-center gap-10">
+        <div className="flex flex-wrap justify-center gap-x-10 gap-y-20">
           {teamData.map((member, index) => (
             <div
               key={index}
-              className={`w-44 h-80 rounded-[100px] overflow-hidden shadow-lg flex flex-col
-            ${index % 2 === 0 ? "-translate-y-6" : "translate-y-6"}
-            hover:scale-105 transition duration-300`}
+              className={`team-card w-44 h-80 rounded-[100px] overflow-hidden shadow-lg flex flex-col hover:scale-105 transition`}
             >
               {/* IMAGE */}
               <div className="h-[65%] w-full">
@@ -82,13 +73,11 @@ const Team = () => {
               </div>
 
               {/* BOTTOM COLOR SECTION */}
-              <div
-                className={`h-[35%] w-full ${member.color} flex flex-col items-center justify-center px-3`}
-              >
-                <h3 className="font-semibold text-sm text-center">
+              <div className="h-[35%] w-full bg-[#742E10] flex flex-col items-center justify-center px-4 overflow-hidden">
+                <h3 className="font-semibold text-sm text-center text-[#F3D18D]">
                   {member.name}
                 </h3>
-                <p className="text-xs text-gray-700 text-center">
+                <p className="text-xs text-[#FAE1B8] text-center leading-tight wrap-break-word">
                   {member.role}
                 </p>
               </div>

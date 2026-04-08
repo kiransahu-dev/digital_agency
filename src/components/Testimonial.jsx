@@ -93,7 +93,7 @@ const Testimonial = () => {
           <Slider {...setting}>
             {TestimonialData.map((item) => (
               <div key={item.id} className="px-2 h-full">
-                <div className="flex flex-col justify-between h-full min-h-62.5 max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[#720a2b] text-white transition-all duration-300 hover:shadow-2xl">
+                <div className="flex flex-col justify-between h-full min-h-62.5 max-w-3xl mx-auto p-6 md:p-8 rounded-2xl shadow-xl bg-[#742E10] text-white transition-all duration-300 hover:shadow-2xl">
                   {" "}
                   {/* Top */}
                   <div className="flex items-center gap-4">
@@ -103,9 +103,9 @@ const Testimonial = () => {
                       className="w-16 h-16 rounded-full border-2 border-white object-cover"
                     />
                     <div>
-                      <p className="text-lg font-semibold">{item.name}</p>
+                      <p className="text-lg font-semibold text-[#F3D18D]">{item.name}</p>
                       {item.role && (
-                        <p className="text-md text-white/80">{item.role}</p>
+                        <p className="text-md text-[#FAE1B8]">{item.role}</p>
                       )}
                     </div>
                   </div>
