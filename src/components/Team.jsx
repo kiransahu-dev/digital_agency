@@ -73,11 +73,11 @@ const Team = () => {
               </div>
 
               {/* BOTTOM COLOR SECTION */}
-              <div className="h-[35%] w-full bg-[#742E10] flex flex-col items-center justify-center px-4 overflow-hidden">
-                <h3 className="font-semibold text-sm text-center text-[#F3D18D]">
+              <div className="h-[35%] w-full bg-linear-to-br from-[#ad3d60] to-[#9d3558] flex flex-col items-center justify-center px-4 overflow-hidden">
+                <h3 className="font-semibold text-sm text-center text-white">
                   {member.name}
                 </h3>
-                <p className="text-xs text-[#FAE1B8] text-center leading-tight wrap-break-word">
+                <p className="text-xs text-gray-200 text-center leading-tight wrap-break-word">
                   {member.role}
                 </p>
               </div>
