@@ -8,7 +8,7 @@ import { fadeIn, textVariant } from "../utils/motion";
 const Hero = () => {
   return (
     <section
-      className="w-full min-h-screen flex items-center bg-[#010101] text-white py-16 md:py-24"
+      className="w-full min-h-[80vh] flex items-center bg-[#010101] text-white py-28 md:py-24"
       id="home"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 xl:px-14 flex flex-col md:flex-row items-center gap-12 md:gap-8">
