@@ -30,7 +30,7 @@ const Hero = () => {
               whileInView="show"
               className="font-semibold md:text-2xl text-[22px] pt-6 md:pt-10 text-white"
             >
-              The Growth Engine for 38+ Leading Brands.
+              The Growth Engine for 41+ Leading Brands.
             </motion.h3>
           </motion.h1>
 

@@ -1,39 +1,40 @@
 import React from "react";
 import Slider from "react-slick";
-import ct2 from "../assets/ct-2.jpg";
-import ct3 from "../assets/ct-3.jpg";
-import ct4 from "../assets/ct-4.jpg";
+import ct1 from "../assets/brand/1.png";
+import ct2 from "../assets/brand/10.png";
+import ct3 from "../assets/brand/16.png";
+import ct4 from "../assets/brand/9.png";
 
 const TestimonialData = [
   {
     id: 1,
     name: "Dr. Hrushikesh Sahu",
     role: "Sri Ram Hospital",
-    text: "Aries Digitals transformed our online presence completely. From content planning to ad campaigns, everything was executed with strategy and clarity. We saw a 4x increase in leads within 3 months!",
+    text: "Aries Digitals transformed our online presence completely. From content planning to ad campaigns, everything was executed with strategy and clarity. We saw a 4x increase in leads within 3 months!. We especially appreciated their transparent communication and consistent support throughout.",
     img: ct3,
     delay: 0.2,
   },
   {
     id: 2,
-    name: "Sivaram Pradhan",
-    role: "Yosoda Nursing Home",
-    text: "We needed a corporate infographic video for promotion, and Aries Digitals nailed it. The storytelling, visuals and editing were world-class.",
+    name: "Shubham Kumar Sahu",
+    role: "Hotel Shree Raghunathaa",
+    text: "Aries Digitals significantly improved our online presence and helped us reach more customers for our pure vegetarian offerings. Their professionalism and understanding of our brand made a real impact on our growth. The state of the art is storytelling, visuals and editing.",
     img: ct2,
     delay: 0.5,
   },
   {
     id: 3,
-    name: "Jagadish Sahu",
-    role: "Akshara Enterprises",
-    text: "Aries Digitals transformed our furniture store from a ghost town into a thriving footfall location. Their strategies are creative, consistent and spot-on for our audience.",
-    img: ct4,
+    name: "Manmeswer Patnaik",
+    role: "Aroscai Technologies Pvt. Ltd.",
+    text: "Swayam and Team Aries Digitals have changed the vibe of our social media. They took our stress out of posting on Facebook and Instagram by delivering creative, high-quality content as well as managing influencer network and ad traffic efficiently. Professional, responsive, and highly adaptive.",
+    img: ct1,
     delay: 0.8,
   },
   {
     id: 4,
-    name: "Jagadish Sahu",
-    role: "Mabello Doors & Furniture Pvt. Ltd",
-    text: "The product shoots by Aries Digitals elevated our brand instantly. Clean, professional, and perfectly lit exactly what our catalog needed.",
+    name: "Abhishek Patro",
+    role: "Hotel Moti Pvt. Ltd.",
+    text: "Recently I associated my digital marketing with Swayam of Aries Digitals. I had only expected him to do the basics but to my amazement he even got Bonus of his team with insights and expertise in this field. I recommend Aries Digitals if you want to increase your visibility in this competitive era.",
     img: ct4,
     delay: 0.8,
   },
@@ -100,10 +101,12 @@ const Testimonial = () => {
                     <img
                       src={item.img}
                       alt={item.name}
-                      className="w-16 h-16 rounded-full border-2 border-white object-cover"
+                      className="w-16 h-16 rounded-full border-2 border-white bg-black/50 object-contain"
                     />
                     <div>
-                      <p className="text-lg font-semibold text-white">{item.name}</p>
+                      <p className="text-lg font-semibold text-white">
+                        {item.name}
+                      </p>
                       {item.role && (
                         <p className="text-md text-white/80">{item.role}</p>
                       )}

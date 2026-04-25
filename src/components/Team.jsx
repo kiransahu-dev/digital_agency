@@ -42,7 +42,7 @@ const teamData = [
   },
   {
     name: "Kumar Swayam",
-    role: "CEO",
+    role: "Founder & CEO",
     image: img7,
   },
 ];
